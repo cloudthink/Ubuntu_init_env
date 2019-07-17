@@ -24,3 +24,7 @@ sudo dpkg -i cuda-repo-ubuntu1604_10.1.168-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
 sudo apt-get update
 sudo apt-get install cuda
+
+#sougou pinyin
+wget http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
+dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
