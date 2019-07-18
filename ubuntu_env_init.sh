@@ -35,3 +35,9 @@ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 wget http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
 dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
 
+#wine
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+sudo apt install --install-recommends winehq-stable
