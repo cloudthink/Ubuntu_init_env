@@ -25,6 +25,13 @@ sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/
 sudo apt-get update
 sudo apt-get install cuda
 
+#manual download https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.6.1.34/prod/10.1_20190620/cudnn-10.1-linux-x64-v7.6.1.34.tgz
+sudo cp cuda/lib64/* /usr/local/cuda-10.1/lib64/
+sudo cp cuda/include/* /usr/local/cuda-10.1/include/
+
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
 #sougou pinyin
 wget http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
 dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+
