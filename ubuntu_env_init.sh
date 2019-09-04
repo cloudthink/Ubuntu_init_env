@@ -3,6 +3,17 @@ sudo apt-get upgrade
 sudo apt-get -y update
 sudo apt-get -y install python-pip python3-pip 
 
+#update python
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update
+sudo apt-get install python3.6
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+sudo apt-get install python3-pip
+#sudo pip3 install --upgrade pip
+wget https://bootstrap.pypa.io/get-pip.py  --no-check-certificate
+sudo python3 get-pip.py
+
 #pip change resource
 mkdir -p ~/.pip/
 cat>~/.pip/pip.conf<<EOF
